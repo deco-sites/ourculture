@@ -14,7 +14,6 @@ export default function Lugar({
     description,
     temperature
 }: Props) {
-    console.log("TESTE")
     return (
         <div class="my-6 py-8 px-2 flex flex-col items-center justify-center gap-8 bg-accent lg:flex-row">
             <div class="flex flex-col justify-center gap-4 max-w-screen-sm">
