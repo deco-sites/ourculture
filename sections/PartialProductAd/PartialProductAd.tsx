@@ -5,7 +5,7 @@ import { ImageWidget } from "apps/admin/widgets.ts";
 import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 
 export interface Props {
-  productAds: Section<ProductAd>[];
+  productAds: Section[];
   message: string;
   image: ImageWidget;
   buttonTitle: string;
@@ -63,6 +63,7 @@ export default function PartialProductAd({
           {message}
         </p>
         <img
+          class="transition-transform transform hover:scale-125"
           src={image}
           width={30}
           height={30}
