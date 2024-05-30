@@ -1,5 +1,4 @@
 import type { Section } from "deco/blocks/section.ts";
-import type { ProductAd } from "../ProductAd/ProductAd.tsx";
 import ProductAdComponent from "../ProductAd/ProductAd.tsx";
 import { ImageWidget } from "apps/admin/widgets.ts";
 import { usePartialSection } from "deco/hooks/usePartialSection.ts";

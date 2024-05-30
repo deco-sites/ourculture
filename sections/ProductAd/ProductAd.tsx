@@ -1,5 +1,6 @@
 import type { ImageWidget } from "apps/admin/widgets.ts";
 import { JSX } from "preact";
+import SaveProductButton from "../../components/saveProductButton/saveProductButton.tsx";
 
 export interface Props {
   product: Product;
@@ -58,9 +59,7 @@ export default function ProductAdSection({
           </a>
         </div>
       </div>
-      <button class="rounded-full p-2 flex items-center justify-center absolute top-5 right-5 text-xs text-white bg-accent">
-        Salvar
-      </button>
+      <SaveProductButton title="Salvar" open={false} />
     </div>
   );
 }
