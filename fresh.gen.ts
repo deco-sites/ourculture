@@ -21,9 +21,11 @@ import * as $Header_Searchbar from "./islands/Header/Searchbar.tsx";
 import * as $Newsletter from "./islands/Newsletter.tsx";
 import * as $OutOfStock from "./islands/OutOfStock.tsx";
 import * as $ProductImageZoom from "./islands/ProductImageZoom.tsx";
+import * as $SaveProductButton_SaveProductButton from "./islands/SaveProductButton/SaveProductButton.tsx";
 import * as $SearchControls from "./islands/SearchControls.tsx";
 import * as $ShippingSimulation from "./islands/ShippingSimulation.tsx";
 import * as $ShowMore from "./islands/ShowMore.tsx";
+import * as $ShowProductEvents_ShowProductEvents from "./islands/ShowProductEvents/ShowProductEvents.tsx";
 import * as $WishlistButton_vtex from "./islands/WishlistButton/vtex.tsx";
 import * as $WishlistButton_wake from "./islands/WishlistButton/wake.tsx";
 import { type Manifest } from "$fresh/server.ts";
@@ -51,9 +53,13 @@ const manifest = {
     "./islands/Newsletter.tsx": $Newsletter,
     "./islands/OutOfStock.tsx": $OutOfStock,
     "./islands/ProductImageZoom.tsx": $ProductImageZoom,
+    "./islands/SaveProductButton/SaveProductButton.tsx":
+      $SaveProductButton_SaveProductButton,
     "./islands/SearchControls.tsx": $SearchControls,
     "./islands/ShippingSimulation.tsx": $ShippingSimulation,
     "./islands/ShowMore.tsx": $ShowMore,
+    "./islands/ShowProductEvents/ShowProductEvents.tsx":
+      $ShowProductEvents_ShowProductEvents,
     "./islands/WishlistButton/vtex.tsx": $WishlistButton_vtex,
     "./islands/WishlistButton/wake.tsx": $WishlistButton_wake,
   },
