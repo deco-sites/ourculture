@@ -1,32 +1,45 @@
-import type { ImageWidget } from "apps/admin/widgets.ts";
+import { ProductDetailsPage } from "apps/commerce/types.ts";
 import { JSX } from "preact";
-import SaveProductButton from "../../components/saveProductButton/saveProductButton.tsx";
+import SaveProductButton from "../../islands/SaveProductButton/SaveProductButton.tsx";
+import { AppContext } from "../../apps/site.ts"
+import type { SectionProps } from "deco/mod.ts";
 
 export interface Props {
-  product: Product;
+  product: ProductDetailsPage | null;
   adDescription?: string;
   vertical?: boolean;
   animateImage?: boolean;
-}
-
-interface Product {
-  title: string;
-  description?: string;
-  price: string;
-  imageSrc: ImageWidget;
-  href?: string;
+  highlight?: boolean;
 }
 
 export type ProductAd = JSX.Element;
 
 const ANIMATE_IMAGE = "transition-transform transform hover:scale-125"
 
+export async function loader(props: Props, _req: Request, ctx: AppContext) {
+  if(props.highlight) {
+    const response = await ctx.invoke.site.loaders.comments.getCommentsByProductId({
+      productId: props.product?.product.productID
+    })
+
+    return {
+      ...props,
+      highlight: response.product > 3.
+    }
+  }
+
+  return {
+    ...props,
+  }
+}
+
 export default function ProductAdSection({ 
   product, 
   adDescription,
   vertical = false,
-  animateImage = false
-}: Props) {
+  animateImage = false,
+  highlight
+}: SectionProps<typeof loader>) {
   return (
     <div class={`p-2 flex flex-col justify-center items-center relative gap-4 w-fit border border-neutral-500 rounded-md hover:border-accent ${vertical ? '' : "lg:flex-row"}`}>
       <div class="relative overflow-hidden">
@@ -34,22 +47,22 @@ export default function ProductAdSection({
           class={`${animateImage ? ANIMATE_IMAGE : ''}`}
           width={280}
           height={420}
-          src={product.imageSrc}
+          src={product?.product.image ? product?.product.image[0].url : ""}
           decoding="async"
           loading="lazy"
         />
       </div>
       <div class={`flex flex-col gap-3 ${vertical ? '' : "lg:gap-4 lg:h-full lg:justify-start lg:mb-auto"}`}>
-        <p class="text-xl font-bold">{product.title}</p>
+        <p class="text-xl font-bold">{product?.product.name}</p>
         <p class="text-base">
-          {adDescription ? adDescription : product.description}
+          {adDescription ? adDescription : product?.product.description}
         </p>
       </div>
       <div class={`flex flex-col gap-3 justify-center items-center ${vertical ? '' : "lg:h-full lg:justify-end lg:mt-auto lg:items-end"}`}>
-        <p class="text-lg font-bold text-accent">{product.price}</p>
+        <p class="text-lg font-bold text-accent">{product?.product.offers?.highPrice}</p>
         <div class={`flex flex-col gap-3 justify-center items-center ${vertical ? '' : "lg:flex-row"}`}>
           <a
-            href={product.href}
+            href={product?.product.url}
             class="px-6 py-2 w-fit rounded-md border-accent border no-underline text-accent hover:bg-accent hover:text-black"
           >
             Mais Detalhes
@@ -59,7 +72,14 @@ export default function ProductAdSection({
           </a>
         </div>
       </div>
-      <SaveProductButton title="Salvar" open={false} />
+      {highlight &&
+        <p 
+            class="py-2 px-4 flex items-center justify-center absolute top-5 left-5 text-xs text-white bg-cyan-600"
+        >
+            Destaque
+        </p>
+      }
+      <SaveProductButton title="Salvar" productId={product?.product.productID ?? ""}/>
     </div>
   );
 }

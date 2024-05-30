@@ -2,10 +2,13 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import * as $$$$$$$$$0 from "./actions/comments/postComments.ts";
 import * as $$$$$$$$$$$0 from "./apps/decohub.ts";
 import * as $$$$$$$$$$$1 from "./apps/site.ts";
 import * as $$$2 from "./loaders/availableIcons.ts";
-import * as $$$3 from "./loaders/icons.ts";
+import * as $$$3 from "./loaders/comments/getAllComments.ts";
+import * as $$$4 from "./loaders/comments/getCommentsByProductId.ts";
+import * as $$$5 from "./loaders/icons.ts";
 import * as $$$0 from "./loaders/Layouts/ProductCard.tsx";
 import * as $$$1 from "./loaders/List/Sections.tsx";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
@@ -58,14 +61,18 @@ import * as $$$$$$47 from "./sections/Product/SearchResult.tsx";
 import * as $$$$$$48 from "./sections/Product/ShelfWithImage.tsx";
 import * as $$$$$$49 from "./sections/Product/Wishlist.tsx";
 import * as $$$$$$40 from "./sections/ProductAd/ProductAd.tsx";
-import * as $$$$$$50 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$51 from "./sections/Social/WhatsApp.tsx";
-import * as $$$$$$52 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$50 from "./sections/ShowProductEvents/ShowProductEvents.tsx";
+import * as $$$$$$51 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$52 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$53 from "./sections/Theme/Theme.tsx";
+import * as $$$$$$54 from "./sections/TotalEvents/TotalEvents.tsx";
 
 const manifest = {
   "loaders": {
     "site/loaders/availableIcons.ts": $$$2,
-    "site/loaders/icons.ts": $$$3,
+    "site/loaders/comments/getAllComments.ts": $$$3,
+    "site/loaders/comments/getCommentsByProductId.ts": $$$4,
+    "site/loaders/icons.ts": $$$5,
     "site/loaders/Layouts/ProductCard.tsx": $$$0,
     "site/loaders/List/Sections.tsx": $$$1,
   },
@@ -120,9 +127,14 @@ const manifest = {
     "site/sections/Product/ShelfWithImage.tsx": $$$$$$48,
     "site/sections/Product/Wishlist.tsx": $$$$$$49,
     "site/sections/ProductAd/ProductAd.tsx": $$$$$$40,
-    "site/sections/Social/InstagramPosts.tsx": $$$$$$50,
-    "site/sections/Social/WhatsApp.tsx": $$$$$$51,
-    "site/sections/Theme/Theme.tsx": $$$$$$52,
+    "site/sections/ShowProductEvents/ShowProductEvents.tsx": $$$$$$50,
+    "site/sections/Social/InstagramPosts.tsx": $$$$$$51,
+    "site/sections/Social/WhatsApp.tsx": $$$$$$52,
+    "site/sections/Theme/Theme.tsx": $$$$$$53,
+    "site/sections/TotalEvents/TotalEvents.tsx": $$$$$$54,
+  },
+  "actions": {
+    "site/actions/comments/postComments.ts": $$$$$$$$$0,
   },
   "apps": {
     "site/apps/decohub.ts": $$$$$$$$$$$0,

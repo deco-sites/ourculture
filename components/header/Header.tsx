@@ -20,6 +20,7 @@ export interface Buttons {
   hideAccountButton?: boolean;
   hideWishlistButton?: boolean;
   hideCartButton?: boolean;
+  hideStatsButton?: boolean;
 }
 
 export interface Props {

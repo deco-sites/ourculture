@@ -1,0 +1,19 @@
+{
+  "name": "Stats",
+  "path": "/stats",
+  "sections": [
+    {
+      "__resolveType": "HeaderOurCulture"
+    },
+    {
+      "__resolveType": "site/sections/TotalEvents/TotalEvents.tsx",
+      "total": {
+        "__resolveType": "site/loaders/comments/getAllComments.ts"
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

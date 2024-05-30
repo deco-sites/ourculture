@@ -11,28 +11,7 @@
         {
           "__resolveType": "site/sections/ProductAd/ProductAd.tsx",
           "product": {
-            "title": "Camiseta",
-            "description": "Camisa muito boa",
-            "price": "R$ 256,00",
-            "imageSrc": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/f4b8730c-2537-4745-b938-644930422652"
-          }
-        },
-        {
-          "__resolveType": "site/sections/ProductAd/ProductAd.tsx",
-          "product": {
-            "title": "Regata",
-            "description": "Muito Ruim",
-            "price": "R$ 199,00",
-            "imageSrc": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/f4b8730c-2537-4745-b938-644930422652"
-          }
-        },
-        {
-          "__resolveType": "site/sections/ProductAd/ProductAd.tsx",
-          "product": {
-            "title": "Casaco",
-            "description": "Mais ou Menos",
-            "price": "R$ 499,00",
-            "imageSrc": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/f4b8730c-2537-4745-b938-644930422652"
+            "__resolveType": "PDP Loader"
           }
         }
       ],
@@ -44,7 +23,10 @@
       "product": {
         "title": "Camiseta",
         "price": "R$139,99",
-        "imageSrc": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/f4b8730c-2537-4745-b938-644930422652"
+        "imageSrc": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/f4b8730c-2537-4745-b938-644930422652",
+        "productId": "1",
+        "highlight": true,
+        "__resolveType": "PDP Loader"
       },
       "adDescription": "CAMISETA BASIC SUPER OVERSIZED",
       "vertical": true,

@@ -54,6 +54,17 @@ function Navbar(
 
         <div class="flex justify-end gap-1">
           <SearchButton />
+          {!buttons?.hideStatsButton && (
+            <a
+              class="flex items-center text-xs font-thin"
+              href="/stats"
+              aria-label="Stats"
+            >
+              <div class="flex btn btn-circle btn-sm btn-ghost gap-1">
+                <Icon id="Friends" size={24} strokeWidth={0.4} />
+              </div>
+            </a>
+          )}
           {platform === "vtex" && <CartButtonVTEX />}
           {platform === "vnda" && <CartButtonVDNA />}
           {platform === "wake" && <CartButtonWake />}
@@ -103,6 +114,19 @@ function Navbar(
         )}
 
         <Searchbar searchbar={searchbar} />
+        {!buttons?.hideStatsButton && (
+          <a
+            class="flex items-center text-xs font-thin"
+            href="/stats"
+            aria-label="Stats"
+          >
+            <div class="flex btn btn-circle btn-sm btn-ghost gap-1">
+              <Icon id="Friends" size={24} strokeWidth={0.4} />
+            </div>
+            STATS
+          </a>
+        )}
+
         {!buttons?.hideAccountButton && (
           <a
             class="flex items-center text-xs font-thin"
