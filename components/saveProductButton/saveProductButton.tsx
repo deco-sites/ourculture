@@ -1,4 +1,3 @@
-import ProductAd from "../../sections/ProductAd/ProductAd.tsx";
 import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 
 
@@ -36,15 +35,9 @@ export default function SaveProductButton({
                 })}
             />
             <div class="modal">
-                <ProductAd 
-                    product={{
-                        imageSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT0yebjaFKFNLElmRSkjxDsSLtBsIDtbfONw&s",
-                        title: "Roupas Indianas",
-                        description: "Explore nossa coleção exclusiva de roupas indianas",
-                        price: "R$ 299,00",
-                        href: "/culturas",
-                    }}
-                />
+                <div class="w-12 h-12">
+                    Teste
+                </div>
                 <label 
                     class="modal-backdrop" 
                     for="modal-save-product"
