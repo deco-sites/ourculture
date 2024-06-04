@@ -73,7 +73,7 @@ export default function PartialProductAd({
         <button
           {...usePartialSection({
             props: {
-              currentProduct: (currentProduct + 1) > productAds.length
+              currentProduct: (currentProduct + 1) === productAds.length
                 ? 0
                 : currentProduct + 1,
             },
