@@ -2,6 +2,7 @@ import Modal from "../../components/ui/Modal.tsx";
 import { useSignal } from "@preact/signals";
 import { invoke } from "../../runtime.ts";
 import { useRef } from 'preact/hooks'
+import toast, { Toaster } from 'npm:react-hot-toast@2.4.1';
 
 export interface Props {
     title: string
@@ -21,6 +22,8 @@ export default function SaveProductButton({
                 productId: productId,
                 comment: textAreaRef.current?.value
             })
+
+            toast('Deu certo.')
         }
     }
 
@@ -62,6 +65,7 @@ export default function SaveProductButton({
                         <button onClick={handleSaveComment}>
                             Publicar
                         </button>
+                        <Toaster />
                     </div>
                 </div>                
             </Modal>
