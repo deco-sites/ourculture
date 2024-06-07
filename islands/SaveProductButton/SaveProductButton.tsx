@@ -1,8 +1,7 @@
 import Modal from "../../components/ui/Modal.tsx";
-import { useSignal } from "@preact/signals";
+import { useSignal, useSignalEffect } from "@preact/signals";
 import { invoke } from "../../runtime.ts";
-import { useRef } from 'preact/hooks'
-
+import { useRef } from "preact/hooks";
 export interface Props {
     title: string
     productId: string
@@ -13,7 +12,16 @@ export default function SaveProductButton({
     productId
 }: Props) {
     const open = useSignal(false);
-    const textAreaRef = useRef<HTMLTextAreaElement>(null)
+    const dispatchToast = useSignal(false);
+    const textAreaRef = useRef<HTMLTextAreaElement>(null);
+
+    useSignalEffect(() => {
+        if(dispatchToast.value) {
+            setTimeout(() => {
+                dispatchToast.value = false
+            }, 3000)
+        }
+    })
 
     const handleSaveComment = async () => {
         if(textAreaRef.current?.value) {
@@ -21,6 +29,8 @@ export default function SaveProductButton({
                 productId: productId,
                 comment: textAreaRef.current?.value
             })
+
+            dispatchToast.value = true;
         }
     }
 
@@ -65,6 +75,13 @@ export default function SaveProductButton({
                     </div>
                 </div>                
             </Modal>
+            {dispatchToast.value &&
+                <div class="toast toast-top toast-center z-[9999]">
+                    <div class="alert alert-success">
+                        <span>Deu muito certo!</span>
+                    </div>
+                </div>
+            }
         </>
     )
 }

@@ -48,7 +48,11 @@
         "imageSrc": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/f4b8730c-2537-4745-b938-644930422652",
         "productId": "1",
         "highlight": true,
-        "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts"
+        "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+        "slug": {
+          "__resolveType": "website/functions/requestToParam.ts",
+          "param": "slug"
+        }
       },
       "adDescription": "CAMISETA BASIC SUPER OVERSIZED",
       "vertical": true,

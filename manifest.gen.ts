@@ -11,6 +11,7 @@ import * as $$$4 from "./loaders/comments/getCommentsByProductId.ts";
 import * as $$$5 from "./loaders/icons.ts";
 import * as $$$0 from "./loaders/Layouts/ProductCard.tsx";
 import * as $$$1 from "./loaders/List/Sections.tsx";
+import * as $$$$$$$0 from "./matchers/utmCampaign.ts";
 import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Cards/IconCardsCarousel.tsx";
 import * as $$$$$$2 from "./sections/Cards/IconCardsCarouselWithImage.tsx";
@@ -132,6 +133,9 @@ const manifest = {
     "site/sections/Social/WhatsApp.tsx": $$$$$$52,
     "site/sections/Theme/Theme.tsx": $$$$$$53,
     "site/sections/TotalEvents/TotalEvents.tsx": $$$$$$54,
+  },
+  "matchers": {
+    "site/matchers/utmCampaign.ts": $$$$$$$0,
   },
   "actions": {
     "site/actions/comments/postComments.ts": $$$$$$$$$0,
