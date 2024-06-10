@@ -15,8 +15,6 @@ export default function SaveProductButton({
     const dispatchToast = useSignal(false);
     const textAreaRef = useRef<HTMLTextAreaElement>(null);
 
-    console.log("build")
-
     useSignalEffect(() => {
         if(dispatchToast.value) {
             setTimeout(() => {
