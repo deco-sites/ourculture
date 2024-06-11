@@ -12,28 +12,28 @@
           "__resolveType": "site/sections/ProductAd/ProductAd.tsx",
           "product": {
             "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
-            "slug": "/jaqueta-militar-marrom/p?skuId=446"
+            "slug": "jaqueta-militar-marrom/p?skuId=446"
           }
         },
         {
           "__resolveType": "site/sections/ProductAd/ProductAd.tsx",
           "product": {
             "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
-            "slug": "/casaco-masculino-gray/p?skuId=66"
+            "slug": "casaco-masculino-gray/p?skuId=66"
           }
         },
         {
           "__resolveType": "site/sections/ProductAd/ProductAd.tsx",
           "product": {
             "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
-            "slug": "/jaqueta-feminina-azul-sea/p?skuId=321"
+            "slug": "jaqueta-feminina-azul-sea/p?skuId=321"
           }
         },
         {
           "__resolveType": "site/sections/ProductAd/ProductAd.tsx",
           "product": {
             "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
-            "slug": "/jaqueta-de-penas-rock/p?skuId=456"
+            "slug": "jaqueta-de-penas-rock/p?skuId=456"
           }
         }
       ],
@@ -104,7 +104,7 @@
       "__resolveType": "site/sections/ProductAd/ProductAd.tsx",
       "product": {
         "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
-        "slug": "/shorts-savana/p?skuId=451"
+        "slug": "shorts-savana/p?skuId=451"
       }
     },
     {
@@ -154,7 +154,7 @@
       "__resolveType": "site/sections/ProductAd/ProductAd.tsx",
       "product": {
         "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
-        "slug": "/casaco-feminino-savana/p?skuId=291"
+        "slug": "casaco-feminino-savana/p?skuId=291"
       }
     },
     {

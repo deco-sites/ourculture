@@ -1,0 +1,8 @@
+{
+  "__resolveType": "vtex/loaders/legacy/relatedProductsLoader.ts",
+  "crossSelling": "whosawalsosaw",
+  "slug": {
+    "__resolveType": "website/functions/requestToParam.ts",
+    "param": "slug"
+  }
+}
