@@ -55,8 +55,10 @@
         }
       },
       "adDescription": "CAMISETA BASIC SUPER OVERSIZED",
-      "vertical": true,
-      "animateImage": true
+      "vertical": false,
+      "animateImage": true,
+      "preload": false,
+      "highlight": true
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
@@ -105,7 +107,9 @@
       "product": {
         "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
         "slug": "shorts-savana/p?skuId=451"
-      }
+      },
+      "animateImage": true,
+      "highlight": true
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
@@ -155,7 +159,9 @@
       "product": {
         "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
         "slug": "casaco-feminino-savana/p?skuId=291"
-      }
+      },
+      "animateImage": true,
+      "highlight": true
     },
     {
       "__resolveType": "Footer - 04"
