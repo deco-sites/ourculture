@@ -1,0 +1,27 @@
+{
+  "name": "Teste",
+  "path": "/test",
+  "sections": [
+    {
+      "__resolveType": "HeaderOurCulture"
+    },
+    {
+      "__resolveType": "site/sections/Content/CallToAction.tsx",
+      "text": "Teste",
+      "cta": [
+        {
+          "variant": "Normal",
+          "href": "/",
+          "text": "Testando"
+        }
+      ]
+    },
+    {
+      "__resolveType": "Footer - 04"
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}
