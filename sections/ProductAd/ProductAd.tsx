@@ -55,7 +55,6 @@ export function ErrorFallback() {
   );
 }
 
-// deno-lint-ignore no-explicit-any
 export function LoadingFallback() {
   const product: ProductDetailsPage = {
     "@type": "ProductDetailsPage",
