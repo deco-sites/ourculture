@@ -29,23 +29,33 @@ export default function ShowProductEvents() {
     }, [inputValue]);
 
     return (
-        <div>
-            <input 
+        <div class="flex flex-col gap-4">
+            <input
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
+                class="block outline-accent rounded border w-full max-w-48 mx-auto px-4 py-2"
             />
             {totalVotes &&
                 <>
-                    <p>
-                        Product: {inputValue}
+                    <p class="font-bold text-center text-2xl">
+                        Produto: {inputValue}
                     </p>
-                    {totalVotes.value?.comments.map(comment =>
-                        <p>{comment}</p>
+                    <p class="font-bold text-center text-2xl">
+                        Total salvos: {totalVotes.value?.product}
+                    </p>
+                    {totalVotes.value?.comments && (
+                        <>
+                            <p class="font-bold text-center text-2xl">
+                                Comentários:
+                            </p>
+                            <ul class="flex flex-col justify-center items-center list-disc">
+                                {totalVotes.value?.comments.map((comment) =>
+                                    <li key={comment}>{comment}</li>
+                                )}
+                            </ul>
+                        </>
                     )}
-                    <p>
-                        Total: {totalVotes.value?.product} votes
-                    </p>
                 </>
             }
         </div>

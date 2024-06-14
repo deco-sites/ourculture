@@ -21,7 +21,7 @@ import * as $Header_Searchbar from "./islands/Header/Searchbar.tsx";
 import * as $Newsletter from "./islands/Newsletter.tsx";
 import * as $OutOfStock from "./islands/OutOfStock.tsx";
 import * as $ProductImageZoom from "./islands/ProductImageZoom.tsx";
-import * as $SaveProductButton_SaveProductButton from "./islands/SaveProductButton/SaveProductButton.tsx";
+import * as $SaveProduct_SaveProduct from "./islands/SaveProduct/SaveProduct.tsx";
 import * as $SearchControls from "./islands/SearchControls.tsx";
 import * as $ShippingSimulation from "./islands/ShippingSimulation.tsx";
 import * as $ShowMore from "./islands/ShowMore.tsx";
@@ -53,8 +53,7 @@ const manifest = {
     "./islands/Newsletter.tsx": $Newsletter,
     "./islands/OutOfStock.tsx": $OutOfStock,
     "./islands/ProductImageZoom.tsx": $ProductImageZoom,
-    "./islands/SaveProductButton/SaveProductButton.tsx":
-      $SaveProductButton_SaveProductButton,
+    "./islands/SaveProduct/SaveProduct.tsx": $SaveProduct_SaveProduct,
     "./islands/SearchControls.tsx": $SearchControls,
     "./islands/ShippingSimulation.tsx": $ShippingSimulation,
     "./islands/ShowMore.tsx": $ShowMore,

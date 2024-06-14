@@ -1,6 +1,6 @@
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import { JSX } from "preact";
-import SaveProductButton from "../../islands/SaveProductButton/SaveProductButton.tsx";
+import SaveProduct from "../../islands/SaveProduct/SaveProduct.tsx";
 import { AppContext } from "../../apps/site.ts"
 import type { SectionProps } from "deco/mod.ts";
 import Image from "apps/website/components/Image.tsx";
@@ -143,7 +143,12 @@ export default function ProductAdSection({
             Destaque
         </p>
       }
-      <SaveProductButton title="Salvar" productId={product?.product.productID ?? ""}/>
+      <SaveProduct 
+        buttonLabel="Salvar"
+        productId={product?.product.productID ?? ""}
+        productName={product?.product.name ?? ""}
+        image={product?.product.image ? product?.product.image[0].url! : ""}
+      />
     </div>
   );
 }

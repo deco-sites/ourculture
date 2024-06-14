@@ -2,13 +2,20 @@ import Modal from "../../components/ui/Modal.tsx";
 import { useSignal, useSignalEffect } from "@preact/signals";
 import { invoke } from "../../runtime.ts";
 import { useRef } from "preact/hooks";
+import Image from "apps/website/components/Image.tsx";
+import Toast from "../../components/daisy/Toast.tsx";
+
 export interface Props {
-    title: string
+    productName: string
+    image: string
+    buttonLabel: string
     productId: string
 }
 
-export default function SaveProductButton({
-    title,
+export default function SaveProduct({
+    productName,
+    image,
+    buttonLabel,
     productId
 }: Props) {
     const open = useSignal(false);
@@ -31,6 +38,7 @@ export default function SaveProductButton({
             })
 
             dispatchToast.value = true;
+            textAreaRef.current.value = "";
         }
     }
 
@@ -40,47 +48,56 @@ export default function SaveProductButton({
                 class="rounded-full p-2 flex items-center justify-center absolute top-5 right-5 text-xs text-white bg-accent"
                 onClick={() => open.value = true}
             >
-                {title}
+                {buttonLabel}
             </button>
             <Modal
                 open={open.value}
                 onClose={() => open.value = false}
             >
-                <div class="flex flex-col p-6">
+                <div class="flex flex-col p-6 bg-white rounded-lg gap-4">
                     <div class="flex gap-4">
-                        <img
+                        <Image
                             width={280}
-                            height={420}
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT0yebjaFKFNLElmRSkjxDsSLtBsIDtbfONw&s"
-                            decoding="async"
+                            height={280}
+                            src={image}
+                            alt={productName}
                             loading="lazy"
                         />
                         <div class="flex flex-col gap-3">
-                            <h2>
-                                Titulo
+                            <h2 class="font-bold text-2xl text-accent">
+                                {productName}
                             </h2>
                             <p>
-                                Descricao
+                                Observação:
                             </p>
-                            <textarea ref={textAreaRef} />
+                            <textarea
+                                class="outline-accent border border-black flex-1 rounded p-4"
+                                ref={textAreaRef} 
+                            />
                         </div>
                     </div>
-                    <div>
-                        <button>
+                    <div class="flex w-100 justify-end gap-4">
+                        <button 
+                            onClick={() => open.value = false}
+                            class="px-4 py-2 rounded-md border border-accent text-accent text-base cursor-pointer hover:bg-accent hover:text-black"
+                        >
                             Cancelar
                         </button>
-                        <button onClick={handleSaveComment}>
+                        <button 
+                            class="px-4 py-2 rounded-md bg-accent text-base cursor-pointer" 
+                            onClick={handleSaveComment}
+                        >
                             Publicar
                         </button>
                     </div>
                 </div>                
             </Modal>
             {dispatchToast.value &&
-                <div class="toast toast-top toast-center z-[9999]">
-                    <div class="alert alert-success">
-                        <span>Deu muito certo!</span>
-                    </div>
-                </div>
+                <Toast 
+                    message="Seu produto foi salvo!"
+                    verticalPosition="toast-top"
+                    horizontalPosition="toast-center"
+                />
             }
         </>
     )
