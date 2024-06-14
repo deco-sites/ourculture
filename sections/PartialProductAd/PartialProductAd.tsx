@@ -1,5 +1,4 @@
 import type { Section } from "deco/blocks/section.ts";
-// import ProductAdComponent from "../ProductAd/ProductAd.tsx";
 import { ImageWidget } from "apps/admin/widgets.ts";
 import { usePartialSection } from "deco/hooks/usePartialSection.ts";
 
@@ -10,41 +9,6 @@ export interface Props {
   buttonTitle: string;
   currentProduct?: number;
 }
-
-// export function ErrorFallback(_: unknown) {
-//   const product = {
-//     productId: "999",
-//     imageSrc:
-//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT0yebjaFKFNLElmRSkjxDsSLtBsIDtbfONw&s",
-//     title: "Roupas Indianas",
-//     description: "Explore nossa coleção exclusiva de roupas indianas",
-//     price: "",
-//     href: "/culturas",
-//   };
-
-//   return (
-//     <ProductAdComponent
-//       product={product} 
-//     />
-//   );
-// }
-
-// export function LoadingFallback() {
-//   const product = {
-//     productId: "888",
-//     imageSrc:
-//       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9LsYz6T9GWTNlaee8UwtQKZjxxlmGG70xNQmZSnY9dSOGPof0s1O-2Oq8Ldn3-DFu1NI&usqp=CAU",
-//     title: "Loading...",
-//     description: "Loading...",
-//     price: "",
-//   };
-
-//   return (
-//     <ProductAdComponent
-//       product={product}
-//     />
-//   );
-// }
 
 export default function PartialProductAd({
   productAds = [],

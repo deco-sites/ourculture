@@ -8,8 +8,8 @@ export default function Toast(props: Props) {
   const { message, verticalPosition, horizontalPosition } = props;
 
   return (
-    <div className={`toast ${verticalPosition} ${horizontalPosition}`}>
-      <div className="alert alert-info">
+    <div className={`toast ${verticalPosition} ${horizontalPosition} z-[9999]`}>
+      <div className="alert alert-info bg-accent">
         <span>{message}</span>
       </div>
     </div>
