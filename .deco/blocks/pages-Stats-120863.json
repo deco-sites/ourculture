@@ -10,6 +10,12 @@
       "total": {
         "__resolveType": "site/loaders/comments/getAllComments.ts"
       }
+    },
+    {
+      "__resolveType": "site/sections/HTMXForm/HTMXForm.tsx",
+      "reminders": [
+        "Teste"
+      ]
     }
   ],
   "seo": {

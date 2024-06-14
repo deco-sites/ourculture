@@ -1,12 +1,14 @@
 // import { ProductDetailsPage } from "apps/commerce/types.ts";
 // import { invoke } from "../../runtime.ts";
+import { AppContext } from "../../apps/site.ts"
 
 
 const relatedProduct = (
     _props: unknown,
     _req: Request,
-    _ctx: unknown
+    _ctx: AppContext
 ) => {
+    // await ctx.invoke.vtex.loaders.legacy.relatedProductsLoader()
     return null
 
     // const relatedProducts = await invoke.vtex.loaders.legacy.relatedProductsLoader({
