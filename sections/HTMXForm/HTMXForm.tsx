@@ -1,13 +1,19 @@
-import { AppContext } from "../../apps/site.ts";
-import { useId } from "../../sdk/useId.ts";
 import { useComponent } from "../Component.tsx";
-// import { asResolved, Resolved } from "deco/mod.ts";
-// import Comments from "./Comments.tsx";
 
+export interface Props {
+    comments: string[]
+}
+
+interface Comments {
+    product: number
+    comments: string[]
+}
+
+// Aproveitei a api de comentários de produtos para simular os lembretes salvos.
 export async function action(
     _props: unknown,
     req: Request,
-    ctx: AppContext
+    _ctx: unknown
 ) {
     try {
         const form = await req.formData();
@@ -26,24 +32,28 @@ export async function action(
             body: JSON.stringify(payload)
         });
 
-        // return useComponent(import.meta.resolve("./Comments.tsx"), {
-        //     context: ctx
-        // })
+        const response: Comments = await fetch(`https://camp-api.deco.cx/event/999`, {
+            headers: {
+                "x-api-key": "ourculture",
+            },
+        })
+        .then(res => res.json());
+
+        return {
+            comments: response.comments
+        };
     } catch (error) {
         throw new Error(error)
     }
 }
 
-export default function HTMXForm() {
-    const slot = useId();
-    
+export default function HTMXForm({ comments }: Props) {
     return (
         <div>
             <form
-                hx-target={`#${slot}`}
-                hx-swap="innerHTML"
-                hx-sync="this:replace"
                 hx-post={useComponent(import.meta.url)}
+                hx-target="closest section"
+                hx-swap="outerHTML"
             >
                 <label>
                     Lembrete:
@@ -59,12 +69,20 @@ export default function HTMXForm() {
                     Adicionar lembrete
                 </button>
             </form>
-            <div>
-                <p>
-                    Lembretes atuais:
-                </p>
-                <div id={slot} />
-            </div>
+            {comments?.length > 0 &&
+                <div>
+                    <p>
+                        Lembretes atuais:
+                    </p>
+                    <ul>
+                        {comments.map(reminder => 
+                            <li key={reminder}>
+                                {reminder}
+                            </li>
+                        )}
+                    </ul>
+                </div>
+            }
         </div>
     )
 }
