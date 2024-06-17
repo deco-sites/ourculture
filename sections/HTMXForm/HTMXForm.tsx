@@ -52,33 +52,37 @@ export async function action(
 
 export default function HTMXForm({ comments }: Props) {
   return (
-    <div>
+    <div class="m-auto border rounded-md border-accent p-4 w-full flex flex-col gap-4 lg:min-w-[768px] lg:w-fit my-8">
       <form
+        class="flex flex-col gap-4 w-100 lg:flex-row"
         hx-post={useComponent(import.meta.url)}
         hx-target="closest section"
         hx-swap="outerHTML"
       >
-        <label>
+        <label
+          class="flex flex-col flex-1"
+        >
           Lembrete:
           <textarea
+            class="outline-accent border border-black flex-1 rounded p-4 w-100"
             type="text"
             name="reminder"
             placeholder="Adicione aqui o seu lembrete..."
           />
         </label>
-        <button type="submit">
+        <button class="px-4 py-2 rounded-md bg-accent text-base cursor-pointer h-fit my-auto" type="submit">
           Adicionar lembrete
         </button>
       </form>
       {comments?.length > 0 &&
         (
           <div>
-            <p>
+            <p class="font-bold text-xl">
               Lembretes atuais:
             </p>
-            <ul>
+            <ul class="flex flex-col gap-3 mt-4">
               {comments.map((reminder) => (
-                <li key={reminder}>
+                <li key={reminder} class="border-b border-spacing-1">
                   {reminder}
                 </li>
               ))}

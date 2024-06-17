@@ -62,8 +62,9 @@ export default function SaveProduct({
         onClose={() => open.value = false}
       >
         <div class="absolute flex flex-col p-6 bg-white rounded-lg gap-4">
-          <div class="flex gap-4">
+          <div class="flex gap-4 flex-col lg:flex-row">
             <Image
+              class="m-auto"
               width={280}
               height={280}
               src={image}
