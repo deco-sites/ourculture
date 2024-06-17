@@ -5,15 +5,17 @@ import { AppContext } from "apps/vtex/mod.ts";
 
 const relatedProduct = async (
     _props: unknown,
-    _req: Request,
+    req: Request,
     ctx: AppContext
 ): Promise<ProductDetailsPage | null> => {
-    const response = await ctx.invoke.vtex.loaders.legacy.relatedProductsLoader({
-        crossSelling: "similars",
-    });
 
-    console.log("OIEEE")
-    console.log(response)
+    const url = new URL(req.url);
+    const slug = url.pathname + url.search;
+
+    const response = await ctx.invoke.vtex.loaders.legacy.relatedProductsLoader({
+        slug,
+        crossSelling: "whosawalsosaw",
+    });
     
     if(!response) return null;
 
