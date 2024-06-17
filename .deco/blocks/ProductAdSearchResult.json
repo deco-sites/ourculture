@@ -1,0 +1,10 @@
+{
+  "__resolveType": "site/sections/ProductAd/ProductAd.tsx",
+  "product": {
+    "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
+    "slug": "camiseta-verde-clara/p?skuId=23"
+  },
+  "animateImage": true,
+  "preload": true,
+  "highlight": false
+}

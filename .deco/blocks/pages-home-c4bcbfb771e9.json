@@ -2,6 +2,15 @@
   "name": "Home",
   "sections": [
     {
+      "__resolveType": "website/sections/Seo/SeoV2.tsx",
+      "titleTemplate": "%s |  OurCulture",
+      "title": "Loja de culturas",
+      "description": "Compre tudo de sua cultura aqui!",
+      "descriptionTemplate": "%s |  OurCulture",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/e827c176-91f7-45cd-9113-a17ab7ba7c72",
+      "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/d5ae863a-c70f-46e6-a247-458b2b7ee380"
+    },
+    {
       "__resolveType": "HeaderOurCulture"
     },
     {
