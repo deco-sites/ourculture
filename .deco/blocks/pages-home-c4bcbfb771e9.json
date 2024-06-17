@@ -50,6 +50,23 @@
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/383cf661-473f-437e-9348-682a52899340"
     },
     {
+      "__resolveType": "site/sections/Images/Carousel.tsx",
+      "images": [
+        {
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/f7a4fe21-454c-43d6-9594-dc83ab9e8ed1",
+          "alt": "Imagem Cultura Chinesa",
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/f7a4fe21-454c-43d6-9594-dc83ab9e8ed1"
+        },
+        {
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/466835c9-6d8c-4f93-b670-9aae66a5f37d",
+          "alt": "Imagem Cultura Indiana",
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/466835c9-6d8c-4f93-b670-9aae66a5f37d"
+        }
+      ],
+      "preload": true,
+      "arrows": true
+    },
+    {
       "__resolveType": "site/sections/ProductAd/ProductAd.tsx",
       "product": {
         "title": "Camiseta",

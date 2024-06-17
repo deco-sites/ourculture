@@ -1,5 +1,4 @@
 import { useId } from "../../sdk/useId.ts";
-import { useSignal } from "@preact/signals";
 import { ComponentChildren } from "preact";
 import { useEffect } from "preact/hooks";
 
@@ -17,9 +16,7 @@ function Modal(props: Props) {
     children,
     open,
     onClose,
-    loading = "lazy",
   } = props;
-  const lazy = useSignal(loading === "lazy" && !open);
   const id = useId();
 
   useEffect(() => {
@@ -33,10 +30,6 @@ function Modal(props: Props) {
     };
   }, [open]);
 
-  useEffect(() => {
-    lazy.value = false;
-  }, []);
-
   return (
     <>
       <input
@@ -47,7 +40,7 @@ function Modal(props: Props) {
         onChange={(e) => e.currentTarget.checked === false && onClose?.()}
       />
       <div class="modal">
-        {!lazy.value && children}
+        {children}
         <label class="modal-backdrop" for={id}>Close</label>
       </div>
     </>

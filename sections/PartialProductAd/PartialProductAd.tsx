@@ -20,15 +20,15 @@ export default function PartialProductAd({
   const productComponent = productAds[currentProduct];
 
   return (
-    <div class="flex p-4 gap-4 flex-col w-fit sm:flex-row">
+    <div class="flex p-4 flex-col w-fit sm:flex-row mx-auto">
       <productComponent.Component {...productComponent.props} />
 
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-2 mx-auto">
         <p>
           {message}
         </p>
         <img
-          class="transition-transform transform hover:scale-125"
+          class="transition-transform transform hover:scale-125 mx-auto"
           src={image}
           width={30}
           height={30}

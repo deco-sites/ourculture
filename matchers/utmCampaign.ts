@@ -1,32 +1,30 @@
-import { MatchContext } from "deco/blocks/matcher.ts"
+import { MatchContext } from "deco/blocks/matcher.ts";
 
 export interface Props {
-    campaigns: string[]
+  campaigns: string[];
 }
 
 export default function UtmCampaing({ campaigns }: Props, ctx: MatchContext) {
+  const urlSearchParams = new URLSearchParams(new URL(ctx.request.url).search);
+  const utmCampaign = urlSearchParams.get("utm_campaign");
 
-    const urlSearchParams = new URLSearchParams(new URL(ctx.request.url).search);
-    const utmCampaign = urlSearchParams.get("utm_campaign");
+  if (!utmCampaign) {
+    return false;
+  }
 
-    if(!utmCampaign) {
-        return false
+  const hasUtmCampaign = campaigns.some((campaign) => {
+    const hasWildcard = campaign.endsWith("*");
+
+    if (hasWildcard && utmCampaign.startsWith(campaign)) {
+      return true;
     }
 
-    const hasUtmCampaign = campaigns.some((campaign) => {
-        const hasWildcard = campaign.endsWith("*");
+    if (utmCampaign === campaign) {
+      return true;
+    }
 
-        if(hasWildcard && utmCampaign.startsWith(campaign)) {
-            return true;
-        };
+    return false;
+  });
 
-        if(utmCampaign === campaign) {
-            return true;
-        };
-
-        return false;
-    });
-
-    return hasUtmCampaign;
-    
+  return hasUtmCampaign;
 }
