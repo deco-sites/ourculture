@@ -4,6 +4,8 @@ import { invoke } from "../../runtime.ts";
 import { useRef } from "preact/hooks";
 import Image from "apps/website/components/Image.tsx";
 import Toast from "../../components/daisy/Toast.tsx";
+import { sendEvent } from "../../sdk/analytics.tsx";
+
 
 export interface Props {
     productName: string
@@ -39,6 +41,12 @@ export default function SaveProduct({
 
             dispatchToast.value = true;
             textAreaRef.current.value = "";
+            sendEvent({
+                name: "post_score",
+                params: {
+                    score: 1,
+                },
+            })
         }
     }
 
@@ -54,7 +62,7 @@ export default function SaveProduct({
                 open={open.value}
                 onClose={() => open.value = false}
             >
-                <div class="flex flex-col p-6 bg-white rounded-lg gap-4">
+                <div class="absolute flex flex-col p-6 bg-white rounded-lg gap-4">
                     <div class="flex gap-4">
                         <Image
                             width={280}

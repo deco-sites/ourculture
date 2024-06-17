@@ -4,6 +4,8 @@ import SaveProduct from "../../islands/SaveProduct/SaveProduct.tsx";
 import { AppContext } from "../../apps/site.ts"
 import type { SectionProps } from "deco/mod.ts";
 import Image from "apps/website/components/Image.tsx";
+import MoreDetailsButton from "../../islands/MoreDetailsButton/MoreDetailsButton.tsx"
+import ModalComments from "../../components/ModalComments/ModalComments.tsx"
 
 export interface Props {
   product: ProductDetailsPage | null;
@@ -51,6 +53,7 @@ export function ErrorFallback() {
   return (
     <ProductAdSection
       product={product}
+      comments={[]}
     />
   );
 }
@@ -74,24 +77,27 @@ export function LoadingFallback() {
   return (
     <ProductAdSection
       product={product}
+      comments={[]}
     />
   );
 }
 
 export async function loader(props: Props, _req: Request, ctx: AppContext) {
-  if(props.highlight) {
-    const response = await ctx.invoke.site.loaders.comments.getCommentsByProductId({
-      productId: props.product?.product.productID
-    })
+  const response = await ctx.invoke.site.loaders.comments.getCommentsByProductId({
+    productId: props.product?.product.productID
+  });
 
+  if(props.highlight) {
     return {
       ...props,
+      comments: response.comments,
       highlight: response.product > 3.
     }
   }
-
+  
   return {
     ...props,
+    comments: response.comments,
   }
 }
 
@@ -101,7 +107,8 @@ export default function ProductAdSection({
   vertical = false,
   animateImage = false,
   highlight,
-  preload = false
+  preload = false,
+  comments
 }: SectionProps<typeof loader>) {
   return (
     <div class={`p-2 flex flex-col justify-between items-center relative gap-4 w-fit border border-neutral-500 rounded-md hover:border-accent ${vertical ? '' : "lg:flex-row lg:min-w-[850px]"}`}>
@@ -125,13 +132,13 @@ export default function ProductAdSection({
       <div class={`flex flex-col gap-3 justify-center items-center ${vertical ? '' : "lg:h-full lg:justify-end lg:mt-auto lg:items-end"}`}>
         <p class="text-lg font-bold text-accent">{product?.product.offers?.highPrice}</p>
         <div class={`flex flex-col gap-3 justify-center items-center ${vertical ? '' : "lg:flex-row"}`}>
-          <a
+          <MoreDetailsButton>
+            <ModalComments comments={comments}/>
+          </MoreDetailsButton>
+          <a 
             href={product?.product.url}
-            class="px-6 py-2 w-fit rounded-md border-accent border no-underline text-accent hover:bg-accent hover:text-black"
+            class="px-6 py-2 w-fit rounded-md border-accent bg-accent border no-underline"
           >
-            Mais Detalhes
-          </a>
-          <a class="px-6 py-2 w-fit rounded-md border-accent bg-accent border no-underline">
             Comprar
           </a>
         </div>

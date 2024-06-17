@@ -20,7 +20,7 @@ export default function PartialProductAd({
   const productComponent = productAds[currentProduct];
 
   return (
-    <div class="flex p-4 gap-4">
+    <div class="flex p-4 gap-4 flex-col w-fit sm:flex-row">
       <productComponent.Component {...productComponent.props} />
 
       <div class="flex flex-col gap-4">

@@ -26,20 +26,7 @@
     {
       "__resolveType": "site/sections/ProductAd/ProductAd.tsx",
       "product": {
-        "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
-        "slug": "casaco-feminino-savana/p?skuId=291"
-      }
-    },
-    {
-      "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "You may also like",
-      "products": {
-        "slug": {
-          "param": "slug",
-          "__resolveType": "website/functions/requestToParam.ts"
-        },
-        "crossSelling": "whosawalsosaw",
-        "__resolveType": "vtex/loaders/legacy/relatedProductsLoader.ts"
+        "__resolveType": "site/loaders/product/relatedProduct.ts"
       }
     },
     {
