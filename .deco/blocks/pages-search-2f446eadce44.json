@@ -5,14 +5,11 @@
     {
       "__resolveType": "commerce/sections/Seo/SeoPLPV2.tsx",
       "jsonLD": {
-        "__resolveType": "PLP Loader"
+        "__resolveType": "Search Loader"
       }
     },
     {
       "__resolveType": "Header - 01"
-    },
-    {
-      "__resolveType": "ProductAdSearchResult"
     },
     {
       "__resolveType": "site/sections/Product/SearchResult.tsx",
