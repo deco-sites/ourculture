@@ -358,5 +358,15 @@
   "/.deco/blocks/Preview%20vtex%2Floaders%2Flegacy%2FrelatedProductsLoader.ts.json": {
     "blockType": "loaders",
     "__resolveType": "vtex/loaders/legacy/relatedProductsLoader.ts"
+  },
+  "/.deco/blocks/Preview%20site%2Fsections%2FLugar%2FLugar.tsx.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/Lugar/Lugar.tsx"
+  },
+  "/.deco/blocks/pages-Teste-118916.json": {
+    "name": "Teste",
+    "path": "/test",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
