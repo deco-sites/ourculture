@@ -6,5 +6,8 @@
   },
   "animateImage": true,
   "preload": true,
-  "highlight": false
+  "highlight": false,
+  "productComments": {
+    "__resolveType": "CommentByProductIdSearchResult"
+  }
 }

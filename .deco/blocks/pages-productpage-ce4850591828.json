@@ -24,6 +24,9 @@
       "__resolveType": "site/sections/ProductAd/ProductAd.tsx",
       "product": {
         "__resolveType": "site/loaders/product/relatedProduct.ts"
+      },
+      "productComments": {
+        "__resolveType": "CommentByProductIdSearchResult"
       }
     },
     {
