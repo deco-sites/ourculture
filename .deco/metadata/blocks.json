@@ -339,15 +339,15 @@
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   },
-  "/.deco/blocks/Preview%20vtex%2Floaders%2Flegacy%2FrelatedProductsLoader.ts.json": {
+  "/.deco/blocks/Preview%20vtex%2loaders%2Flegacy%2FrelatedProductsLoader.ts.json": {
     "blockType": "loaders",
     "__resolveType": "vtex/loaders/legacy/relatedProductsLoader.ts"
   },
-  "/.deco/blocks/Preview%20vtex%2Floaders%2FintelligentSearch%2FproductDetailsPage.ts.json": {
+  "/.deco/blocks/Preview%20vtex%2loaders%2FintelligentSearch%2FproductDetailsPage.ts.json": {
     "blockType": "loaders",
     "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts"
   },
-  "/.deco/blocks/Preview%20site%2Floaders%2Fproduct%2FrelatedProduct.ts.json": {
+  "/.deco/blocks/Preview%20site%2loaders%2Fproduct%2FrelatedProduct.ts.json": {
     "blockType": "loaders",
     "__resolveType": "site/loaders/product/relatedProduct.ts"
   },
