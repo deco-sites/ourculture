@@ -3,6 +3,13 @@
   "path": "/stats",
   "sections": [
     {
+      "__resolveType": "website/sections/Seo/SeoV2.tsx",
+      "title": "Produtos salvos",
+      "titleTemplate": "%s | OurCulture",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/e827c176-91f7-45cd-9113-a17ab7ba7c72",
+      "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/d5ae863a-c70f-46e6-a247-458b2b7ee380"
+    },
+    {
       "__resolveType": "HeaderOurCulture"
     },
     {

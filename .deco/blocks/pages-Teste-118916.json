@@ -3,6 +3,9 @@
   "path": "/test",
   "sections": [
     {
+      "__resolveType": "website/sections/Seo/SeoV2.tsx"
+    },
+    {
       "__resolveType": "HeaderOurCulture"
     },
     {
@@ -15,9 +18,6 @@
           "text": "Testando"
         }
       ]
-    },
-    {
-      "__resolveType": "website/sections/Seo/SeoV2.tsx"
     }
   ],
   "seo": {

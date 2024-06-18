@@ -1,1 +1,50 @@
-{"name":"Culturas","path":"/culturas","sections":[{"__resolveType":"HeaderOurCulture"},{"__resolveType":"site/sections/Images/Carousel.tsx","images":[{"desktop":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/1e282c76-8d98-46ed-9ac6-bab00143f927","mobile":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/83096d3e-ded4-445a-a57d-42aa0985524e","alt":"Roupas da cultura japonesa"},{"desktop":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/ca26ec12-21ba-4b6b-acd6-518919c0969f","mobile":"https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/a09d0624-604b-415d-bb41-e0d502cfea6e","alt":"Roupas da cultura indiana"}],"arrows":true,"dots":true,"interval":4},{"__resolveType":"site/sections/Lugar/Lugar.tsx","title":"Temperatura na Índia","temperature":{"__resolveType":"weather/loaders/temperature.ts","lat":21.7679,"long":78.8718},"description":"<p>Você sabia que a capital da Índia é Nova Delhi? Planejada e construída no início do século XX,&nbsp;<strong>representa uma parte da metrópole Delhi</strong>, uma das cidades mais populosas do mundo.</p><p>Projetada pelo arquiteto Edward Lutyens, é conhecida por seus bulevares arborizados, por ser a sede de importantes instituições e guardar magníficos monumentos nacionais, como o Templo de Akshardham, o maior templo hindu do mundo.</p>"}],"seo":{"__resolveType":"website/sections/Seo/SeoV2.tsx"},"__resolveType":"website/pages/Page.tsx"}
+{
+  "name": "Culturas",
+  "path": "/culturas",
+  "sections": [
+    {
+      "__resolveType": "website/sections/Seo/SeoV2.tsx",
+      "titleTemplate": "%s | OurCulture",
+      "descriptionTemplate": "%s | OurCulture",
+      "title": "Culturas",
+      "description": "Saiba mais sobre culturas",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/e827c176-91f7-45cd-9113-a17ab7ba7c72",
+      "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/d5ae863a-c70f-46e6-a247-458b2b7ee380"
+    },
+    {
+      "__resolveType": "HeaderOurCulture"
+    },
+    {
+      "__resolveType": "site/sections/Images/Carousel.tsx",
+      "images": [
+        {
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/1e282c76-8d98-46ed-9ac6-bab00143f927",
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/83096d3e-ded4-445a-a57d-42aa0985524e",
+          "alt": "Roupas da cultura japonesa"
+        },
+        {
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/ca26ec12-21ba-4b6b-acd6-518919c0969f",
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10002/a09d0624-604b-415d-bb41-e0d502cfea6e",
+          "alt": "Roupas da cultura indiana"
+        }
+      ],
+      "arrows": true,
+      "dots": true,
+      "interval": 4
+    },
+    {
+      "__resolveType": "site/sections/Lugar/Lugar.tsx",
+      "title": "Temperatura na Índia",
+      "description": "<p>Você sabia que a capital da Índia é Nova Delhi? Planejada e construída no início do século XX,&nbsp;<strong>representa uma parte da metrópole Delhi</strong>, uma das cidades mais populosas do mundo.</p><p>Projetada pelo arquiteto Edward Lutyens, é conhecida por seus bulevares arborizados, por ser a sede de importantes instituições e guardar magníficos monumentos nacionais, como o Templo de Akshardham, o maior templo hindu do mundo.</p>",
+      "temperature": {
+        "__resolveType": "weather/loaders/temperature.ts",
+        "lat": 21.7679,
+        "long": 78.8718
+      }
+    }
+  ],
+  "seo": {
+    "__resolveType": "website/sections/Seo/SeoV2.tsx"
+  },
+  "__resolveType": "website/pages/Page.tsx"
+}

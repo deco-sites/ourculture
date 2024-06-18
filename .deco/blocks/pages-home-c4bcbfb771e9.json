@@ -26,7 +26,10 @@
           "productComments": {
             "__resolveType": "site/loaders/comments/getCommentsByProductId.ts",
             "productId": "446"
-          }
+          },
+          "preload": true,
+          "highlight": true,
+          "animateImage": true
         },
         {
           "__resolveType": "site/sections/ProductAd/ProductAd.tsx",
