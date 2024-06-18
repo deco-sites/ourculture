@@ -22,6 +22,10 @@
           "product": {
             "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
             "slug": "jaqueta-militar-marrom/p?skuId=446"
+          },
+          "productComments": {
+            "__resolveType": "site/loaders/comments/getCommentsByProductId.ts",
+            "productId": "446"
           }
         },
         {
@@ -29,6 +33,10 @@
           "product": {
             "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
             "slug": "casaco-masculino-gray/p?skuId=66"
+          },
+          "productComments": {
+            "__resolveType": "site/loaders/comments/getCommentsByProductId.ts",
+            "productId": "66"
           }
         },
         {
@@ -36,6 +44,10 @@
           "product": {
             "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
             "slug": "jaqueta-feminina-azul-sea/p?skuId=321"
+          },
+          "productComments": {
+            "__resolveType": "site/loaders/comments/getCommentsByProductId.ts",
+            "productId": "321"
           }
         },
         {
@@ -43,6 +55,10 @@
           "product": {
             "__resolveType": "vtex/loaders/intelligentSearch/productDetailsPage.ts",
             "slug": "jaqueta-de-penas-rock/p?skuId=456"
+          },
+          "productComments": {
+            "__resolveType": "site/loaders/comments/getCommentsByProductId.ts",
+            "productId": "456"
           }
         }
       ],
@@ -84,7 +100,11 @@
       "vertical": false,
       "animateImage": true,
       "preload": false,
-      "highlight": true
+      "highlight": true,
+      "productComments": {
+        "__resolveType": "site/loaders/comments/getCommentsByProductId.ts",
+        "productId": "221"
+      }
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
@@ -135,7 +155,11 @@
         "slug": "shorts-savana/p?skuId=451"
       },
       "animateImage": true,
-      "highlight": true
+      "highlight": true,
+      "productComments": {
+        "__resolveType": "site/loaders/comments/getCommentsByProductId.ts",
+        "productId": "451"
+      }
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
@@ -187,7 +211,11 @@
         "slug": "casaco-feminino-savana/p?skuId=291"
       },
       "animateImage": true,
-      "highlight": true
+      "highlight": true,
+      "productComments": {
+        "__resolveType": "site/loaders/comments/getCommentsByProductId.ts",
+        "productId": "291"
+      }
     },
     {
       "__resolveType": "Footer - 04"

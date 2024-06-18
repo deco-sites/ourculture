@@ -1,11 +1,10 @@
 import { ProductDetailsPage } from "apps/commerce/types.ts";
 import { JSX } from "preact";
 import SaveProduct from "../../islands/SaveProduct/SaveProduct.tsx";
-import { AppContext } from "../../apps/site.ts";
-import type { SectionProps } from "deco/mod.ts";
 import Image from "apps/website/components/Image.tsx";
 import MoreDetailsButton from "../../islands/MoreDetailsButton/MoreDetailsButton.tsx";
 import ModalComments from "../../components/ModalComments/ModalComments.tsx";
+import { ProductComments } from "../../loaders/comments/getCommentsByProductId.ts";
 
 export interface Props {
   product: ProductDetailsPage | null;
@@ -14,6 +13,7 @@ export interface Props {
   animateImage?: boolean;
   highlight?: boolean;
   preload?: boolean;
+  productComments?: ProductComments
 }
 
 export type ProductAd = JSX.Element;
@@ -54,7 +54,6 @@ export function ErrorFallback() {
   return (
     <ProductAdSection
       product={product}
-      comments={[]}
     />
   );
 }
@@ -78,29 +77,8 @@ export function LoadingFallback() {
   return (
     <ProductAdSection
       product={product}
-      comments={[]}
     />
   );
-}
-
-export async function loader(props: Props, _req: Request, ctx: AppContext) {
-  const response = await ctx.invoke.site.loaders.comments
-    .getCommentsByProductId({
-      productId: props.product?.product.productID,
-    });
-
-  if (props.highlight) {
-    return {
-      ...props,
-      comments: response.comments,
-      highlight: response.product > 3.,
-    };
-  }
-
-  return {
-    ...props,
-    comments: response.comments,
-  };
 }
 
 export default function ProductAdSection({
@@ -110,8 +88,8 @@ export default function ProductAdSection({
   animateImage = false,
   highlight,
   preload = false,
-  comments,
-}: SectionProps<typeof loader>) {
+  productComments
+}: Props) {
   return (
     <div
       class={`p-2 flex flex-col justify-between items-center relative gap-4 my-4 m-auto w-fit border border-neutral-500 rounded-md hover:border-accent ${
@@ -161,7 +139,7 @@ export default function ProductAdSection({
           }`}
         >
           <MoreDetailsButton>
-            <ModalComments comments={comments} />
+            <ModalComments comments={productComments?.comments ?? []} />
           </MoreDetailsButton>
           <a
             href={product?.product.url}
@@ -171,7 +149,7 @@ export default function ProductAdSection({
           </a>
         </div>
       </div>
-      {highlight &&
+      {(highlight && productComments?.comments && productComments?.comments?.length > 3) &&
         (
           <p class="py-2 px-4 flex items-center justify-center absolute top-5 left-5 text-xs text-white bg-cyan-600">
             Destaque
