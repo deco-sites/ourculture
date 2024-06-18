@@ -13,7 +13,7 @@ export interface Props {
   animateImage?: boolean;
   highlight?: boolean;
   preload?: boolean;
-  productComments?: ProductComments
+  productComments?: ProductComments;
 }
 
 export type ProductAd = JSX.Element;
@@ -88,7 +88,7 @@ export default function ProductAdSection({
   animateImage = false,
   highlight,
   preload = false,
-  productComments
+  productComments,
 }: Props) {
   return (
     <div
@@ -149,7 +149,8 @@ export default function ProductAdSection({
           </a>
         </div>
       </div>
-      {(highlight && productComments?.comments && productComments?.comments?.length > 3) &&
+      {(highlight && productComments?.comments &&
+        productComments?.comments?.length > 3) &&
         (
           <p class="py-2 px-4 flex items-center justify-center absolute top-5 left-5 text-xs text-white bg-cyan-600">
             Destaque

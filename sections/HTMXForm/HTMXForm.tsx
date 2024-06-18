@@ -59,9 +59,7 @@ export default function HTMXForm({ comments }: Props) {
         hx-target="closest section"
         hx-swap="outerHTML"
       >
-        <label
-          class="flex flex-col flex-1"
-        >
+        <label class="flex flex-col flex-1">
           Lembrete:
           <textarea
             class="outline-accent border border-black flex-1 rounded p-4 w-100"
@@ -70,7 +68,10 @@ export default function HTMXForm({ comments }: Props) {
             placeholder="Adicione aqui o seu lembrete..."
           />
         </label>
-        <button class="px-4 py-2 rounded-md bg-accent text-base cursor-pointer h-fit my-auto" type="submit">
+        <button
+          class="px-4 py-2 rounded-md bg-accent text-base cursor-pointer h-fit my-auto"
+          type="submit"
+        >
           Adicionar lembrete
         </button>
       </form>
