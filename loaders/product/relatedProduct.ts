@@ -7,8 +7,8 @@ const relatedProduct = async (
   ctx: AppContext,
 ): Promise<ProductDetailsPage | null> => {
   const url = new URL(req.url);
-  const slug = url.pathname + url.search;
-
+  const slug = url.pathname.split("/")[1];
+  
   const response = await ctx.invoke.vtex.loaders.legacy.relatedProductsLoader({
     slug,
     crossSelling: "whosawalsosaw",
